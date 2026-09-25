@@ -1,0 +1,21 @@
+cd foldername
+→ changes the current directory
+
+npm init -y
+→ creates package.json with default values
+
+node -v
+→ shows Node.js version
+
+npm -v
+→ shows npm version
+
+npm install express
+→ installs Express and adds it to dependencies
+
+node server.js
+→ runs server.js directly
+
+npm run dev
+→ runs the command written under "dev" in package.json
+   Example: "dev": "node server.js"

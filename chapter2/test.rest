@@ -1,0 +1,23 @@
+### TEST GET / website
+GET http://localhost:3000
+
+
+#### TEST GET /about website
+GET http://localhost:3000/about
+
+### DATA ENDPOINTS
+#### TEST GET /api/data
+GET http://localhost:3000/api/data
+
+#### TEST POST /api/data
+POST http://localhost:3000/api/data
+Content-Type: application/json
+
+{
+    "name": "param Doe",
+    "age": 25
+}
+
+### delete endpoint
+#### TEST DELETE /api/data
+DELETE http://localhost:3000/api/data
