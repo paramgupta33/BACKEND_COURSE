@@ -19,3 +19,6 @@ node server.js
 npm run dev
 → runs the command written under "dev" in package.json
    Example: "dev": "node server.js"
+
+npm install express bcryptjs jsonwebtoken
+→installs express bcryptjs(encrypting passsword) and jsonwebtoken(for auth)

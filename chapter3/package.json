@@ -1,13 +1,20 @@
 {
   "name": "chapter3",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple fullstack to do list using Node.js, Express",
   "main": "index.js",
   "scripts": {
+    "dev": "node --env-file=.env --watch ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  }
 }
