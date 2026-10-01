@@ -6,6 +6,43 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "username": "testuser5",
+    "username": "testuser100",
     "password": "testpassword"
 }
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "param@gmail.com",
+    "password": "P@r@m32198"
+}
+
+
+### // Get /todos
+GET http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzkwODc2NTUxLCJleHAiOjE3OTA5NjI5NTF9.YYAeWXZXBWB822Momfj7z0qLIH_92rxJ-yx001vK9sk
+
+
+### // Post /todos
+POST http://localhost:3000/todos
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzkwODc2NTUxLCJleHAiOjE3OTA5NjI5NTF9.YYAeWXZXBWB822Momfj7z0qLIH_92rxJ-yx001vK9sk
+
+{
+    "task": "Project Finish now"
+}
+
+### // Put /todos/:id
+PUT http://localhost:3000/todos/10
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzkwODc2NTUxLCJleHAiOjE3OTA5NjI5NTF9.YYAeWXZXBWB822Momfj7z0qLIH_92rxJ-yx001vK9sk
+
+{
+    "completed": 0
+}
+
+### // Delete /todos/:id
+DELETE http://localhost:3000/todos/10
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzkwODc2NTUxLCJleHAiOjE3OTA5NjI5NTF9.YYAeWXZXBWB822Momfj7z0qLIH_92rxJ-yx001vK9sk

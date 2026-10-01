@@ -190,7 +190,7 @@
         ) { return }
 
         // reset error and set isAuthenticating to true
-        error.style.display = 'none'
+        textError.style.display = 'none'
         isAuthenticating = true
         authBtn.innerText = 'Authenticating...'
 
@@ -210,8 +210,10 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username: emailVal, password: passVal })
+                        
                 })
                 data = await response.json()
+                console.log('authenticating...');
             }
 
             if (data.token) {
@@ -232,7 +234,7 @@
 
         } catch (err) {
             console.log(err.message)
-            error.innerText = err.message
+            textError.innerText = err.message
             error.style.display = 'block'
         } finally {
             authBtn.innerText = 'Submit'
@@ -251,7 +253,9 @@
     async function fetchTodos() {
         isLoading = true
         const response = await fetch(apiBase + 'todos', {
-            headers: { 'Authorization': token }
+            headers: {
+                'Authorization': token
+            }
         })
         const todosData = await response.json()
         todos = todosData
@@ -293,8 +297,8 @@
         await fetch(apiBase + 'todos', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': token
+                'Content-Type': 'application/json', 
+                'Authorization':  token
             },
             body: JSON.stringify({ task })
         })
